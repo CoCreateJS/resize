@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.2...v1.14.3) (2026-01-19)
+
+
+### Bug Fixes
+
+* update worklow ([c9b7086](https://github.com/CoCreate-app/CoCreate-resize/commit/c9b708672ab1f69201361d3936ae97dd8bde1150))
+
 ## [1.14.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.1...v1.14.2) (2025-05-01)
 
 
