@@ -1,3 +1,12 @@
+## [1.14.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.3...v1.14.4) (2026-07-11)
+
+
+### Bug Fixes
+
+* bump package versions ([52c1bf2](https://github.com/CoCreate-app/CoCreate-resize/commit/52c1bf295a934f3cfc727fd6c57efc703e3ae8ce))
+* removed post install and add add packages to apprved list ([6ea1f78](https://github.com/CoCreate-app/CoCreate-resize/commit/6ea1f78dbb1a4dbbd5f51b8fbb086c6b99774d71))
+* semantic version handling ([185c791](https://github.com/CoCreate-app/CoCreate-resize/commit/185c79106a94dd017427edc04a74c5d74012a286))
+
 ## [1.14.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.2...v1.14.3) (2026-01-19)
 
 
