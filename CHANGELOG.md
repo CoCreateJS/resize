@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.4...v1.15.0) (2026-07-17)
+
+
+### Features
+
+* update automated workflow and release configuration for improved semantic release handling ([3cf83e0](https://github.com/CoCreate-app/CoCreate-resize/commit/3cf83e03ba602de8d7a864ae3cc3307b81b6e525))
+
 ## [1.14.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.3...v1.14.4) (2026-07-11)
 
 
