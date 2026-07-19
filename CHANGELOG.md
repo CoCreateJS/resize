@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.15.1...v1.15.2) (2026-07-19)
+
+
+### Bug Fixes
+
+* set default branch to main ([96801a2](https://github.com/CoCreate-app/CoCreate-resize/commit/96801a2abbeaecefb991e05b9f8f6c64af28c008))
+
 ## [1.15.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.15.0...v1.15.1) (2026-07-17)
 
 
