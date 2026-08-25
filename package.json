@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-resize.git"
+    "url": "git+https://gitlab.com/cocreatejs/CoCreate-resize.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
