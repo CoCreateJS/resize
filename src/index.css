@@ -1,39 +1,102 @@
-div[resize] {
-    position: absolute;
-    display: block;
-}
-div[resize]:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-div[resize='left'] {
-    cursor: e-resize;
-    width: 4px;
-    left: 0px;
-    top: 0;
-    height: 100%;
-}
-
-div[resize='right'] {
-    cursor: e-resize;
-    width: 4px;
-    right: 0px;
-    top: 0;
-    height: 100%;
+[resize="left"],
+[resize="right"],
+[resize="top"],
+[resize="bottom"] {
+	--resize-handle-size: 8px;
+	--resize-handle-width: 1px;
+	--resize-handle-active-width: 3px;
+	--resize-handle-color: var(--coc-border-color, rgba(0, 0, 0, 0.175));
+	--resize-handle-active-color: var(--coc-primary, #405189);
+	position: absolute;
+	display: block;
+	z-index: 2;
+	touch-action: none;
 }
 
-div[resize='top'] {
-    cursor: s-resize;
-    height: 4px;
-    width: 100%;
-    top: 0px;
-    left: 0;
-    touch-action: auto;
+[resize="left"]::after,
+[resize="right"]::after,
+[resize="top"]::after,
+[resize="bottom"]::after {
+	position: absolute;
+	content: "";
+	background-color: var(--resize-handle-color);
+	transition:
+		background-color 0.15s ease,
+		width 0.15s ease,
+		height 0.15s ease;
 }
 
-div[resize='bottom'] {
-    cursor: s-resize;
-    height: 4px;
-    width: 100%;
-    bottom: 0px;
-    left: 0;
+[resize="left"]:hover::after,
+[resize="left"]:active::after,
+[resize="right"]:hover::after,
+[resize="right"]:active::after,
+[resize="top"]:hover::after,
+[resize="top"]:active::after,
+[resize="bottom"]:hover::after,
+[resize="bottom"]:active::after {
+	background-color: var(--resize-handle-active-color);
+}
+
+[resize="left"],
+[resize="right"] {
+	top: 0;
+	width: var(--resize-handle-size);
+	height: 100%;
+	cursor: ew-resize;
+}
+
+[resize="left"] {
+	left: calc(var(--resize-handle-size) / -2);
+}
+
+[resize="right"] {
+	right: calc(var(--resize-handle-size) / -2);
+}
+
+[resize="left"]::after,
+[resize="right"]::after {
+	top: 0;
+	left: 50%;
+	width: var(--resize-handle-width);
+	height: 100%;
+	transform: translateX(-50%);
+}
+
+[resize="left"]:hover::after,
+[resize="left"]:active::after,
+[resize="right"]:hover::after,
+[resize="right"]:active::after {
+	width: var(--resize-handle-active-width);
+}
+
+[resize="top"],
+[resize="bottom"] {
+	left: 0;
+	width: 100%;
+	height: var(--resize-handle-size);
+	cursor: ns-resize;
+}
+
+[resize="top"] {
+	top: calc(var(--resize-handle-size) / -2);
+}
+
+[resize="bottom"] {
+	bottom: calc(var(--resize-handle-size) / -2);
+}
+
+[resize="top"]::after,
+[resize="bottom"]::after {
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: var(--resize-handle-width);
+	transform: translateY(-50%);
+}
+
+[resize="top"]:hover::after,
+[resize="top"]:active::after,
+[resize="bottom"]:hover::after,
+[resize="bottom"]:active::after {
+	height: var(--resize-handle-active-width);
 }
