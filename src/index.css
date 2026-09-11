@@ -9,7 +9,7 @@
 	--resize-handle-active-color: var(--coc-primary, #405189);
 	position: absolute;
 	display: block;
-	z-index: 2;
+	z-index: 3;
 	touch-action: none;
 }
 
