@@ -604,16 +604,13 @@ function autoResizeElement(element) {
 	if (element.tagName === "TEXTAREA") {
 		element.style.height = "auto";
 
-		let scrollHeight;
-		if (element.contentDocument) {
-			scrollHeight = element.contentDocument.body.scrollHeight;
-		} else {
-			// For other elements, get scrollHeight directly
-			scrollHeight = element.scrollHeight;
-		}
-
-		// Set the height of the element to the calculated scrollHeight
-		element.style.height = scrollHeight + "px";
+		const style = getComputedStyle(element);
+		const padding = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+		const border = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+		// scrollHeight includes padding, but not borders.
+		const height = element.scrollHeight +
+			(style.boxSizing === "border-box" ? border : -padding);
+		element.style.height = Math.max(0, height) + "px";
 	} else if (element.tagName === "SELECT" && element.multiple) {
 		element.size = Math.max(element.options.length, 1); // Ensure at least 1 visible option
 	}
