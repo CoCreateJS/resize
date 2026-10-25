@@ -361,6 +361,8 @@ CoCreateResize.prototype = {
                     " grid-row-end:span_" +
                     this.heightSpan
                 );
+
+            this.collaborate({});
         }
 
         DIRECTIONS.map((d) => {
@@ -547,53 +549,27 @@ CoCreateResize.prototype = {
     },
 
     collaborate: function ({ left, top, width, height, rowEnd, columnEnd }) {
-        if (window.CoCreate && window.CoCreate.text) {
-            let domTextEditor = this.resizeWidget.closest("[contenteditable]");
-            if (domTextEditor) {
-                if (left)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "left",
-                        value: left + "px"
-                    });
-                if (top)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "top",
-                        value: top + "px"
-                    });
-                if (width)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "width",
-                        value: width + "px"
-                    });
-                if (height)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "height",
-                        value: height + "px"
-                    });
-                if (rowEnd)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "grid-row-end",
-                        value: "span " + rowEnd
-                    });
-                if (columnEnd)
-                    CoCreate.text.setStyle({
-                        domTextEditor,
-                        target: this.resizeWidget,
-                        property: "grid-column-end",
-                        value: "span " + columnEnd
-                    });
-            }
-        }
+        const editorElement = this.resizeWidget.editorPosition?.editorElement;
+        if (!editorElement?.editor?.setAttribute) return;
+
+        const style = this.resizeWidget.ownerDocument.createElement("span").style;
+        style.cssText = this.resizeWidget.getAttribute("style") || "";
+        if (left !== undefined) style.left = left + "px";
+        if (top !== undefined) style.top = top + "px";
+        if (width !== undefined) style.width = width + "px";
+        if (height !== undefined) style.height = height + "px";
+        if (rowEnd !== undefined) style.setProperty("grid-row-end", "span " + rowEnd);
+        if (columnEnd !== undefined) style.setProperty("grid-column-end", "span " + columnEnd);
+
+        const result = editorElement.editor.setAttribute({
+            target: this.resizeWidget,
+            name: "style",
+            value: style.cssText
+        });
+        result?.catch(error => this.resizeWidget.dispatchEvent(new CustomEvent("editor-error", {
+            bubbles: true,
+            detail: { error }
+        })));
     }
 };
 
