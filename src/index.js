@@ -549,8 +549,10 @@ CoCreateResize.prototype = {
     },
 
     collaborate: function ({ left, top, width, height, rowEnd, columnEnd }) {
-        const editorElement = this.resizeWidget.editorPosition?.editorElement;
-        if (!editorElement?.editor?.setAttribute) return;
+        const details = typeof this.resizeWidget.editor?.getStart === "function"
+            ? this.resizeWidget.editor : this.resizeWidget.editorDetails;
+        const editorElement = details?.element || details?.editorElement;
+        if (typeof details?.setAttribute !== "function" && !editorElement?.editor?.setAttribute) return;
 
         const style = this.resizeWidget.ownerDocument.createElement("span").style;
         style.cssText = this.resizeWidget.getAttribute("style") || "";
@@ -561,11 +563,9 @@ CoCreateResize.prototype = {
         if (rowEnd !== undefined) style.setProperty("grid-row-end", "span " + rowEnd);
         if (columnEnd !== undefined) style.setProperty("grid-column-end", "span " + columnEnd);
 
-        const result = editorElement.editor.setAttribute({
-            target: this.resizeWidget,
-            name: "style",
-            value: style.cssText
-        });
+        const result = typeof details.setAttribute === "function"
+            ? details.setAttribute("style", style.cssText)
+            : editorElement.editor.setAttribute({ target: this.resizeWidget, name: "style", value: style.cssText });
         result?.catch(error => this.resizeWidget.dispatchEvent(new CustomEvent("editor-error", {
             bubbles: true,
             detail: { error }
