@@ -15,6 +15,50 @@
   "publishConfig": {
     "access": "public"
   },
+  "cocreate": {
+    "environment": [
+      "client"
+    ],
+    "interface": {
+      "schemaVersion": 1,
+      "summary": "A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.",
+      "source": "src/index.js",
+      "declarative": {
+        "selectors": [
+          "",
+          "[resizable]:not([resizable='false'])",
+          "[height='auto']",
+          "[height='auto'] option"
+        ],
+        "attributes": [
+          {
+            "name": "class"
+          },
+          {
+            "name": "component"
+          },
+          {
+            "name": "height"
+          },
+          {
+            "name": "resizing"
+          },
+          {
+            "name": "style"
+          }
+        ]
+      },
+      "api": {
+        "exports": [
+          "init",
+          "initElement",
+          "resizeWidgets",
+          "resizers",
+          "selector"
+        ]
+      }
+    }
+  },
   "scripts": {
     "start": "webpack --config webpack.config.js",
     "build": "webpack --mode=production --config webpack.config.js",
