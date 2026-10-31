@@ -71,9 +71,9 @@
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-resize/issues"
+    "url": "https://github.com/CoCreateJS/CoCreate-resize/issues"
   },
-  "homepage": "https://cocreate.app/docs/resize",
+  "homepage": "https://CoCreateJS.com/docs/resize",
   "funding": {
     "type": "GitHub Sponsors ❤",
     "url": "https://github.com/sponsors/CoCreate-app"
