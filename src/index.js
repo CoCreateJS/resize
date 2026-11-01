@@ -15,10 +15,35 @@ document.head.appendChild(styleEl);
 const styleSheet = styleEl.sheet;
 
 const coCreateResize = {
+    /**
+     * CSS selector used by init() to find resizable elements.
+ * @public
+ * @environment client
+     * @type {string}
+ */
     selector: "", //'.resize',
+    /**
+     * Elements matched by the current selector.
+ * @public
+ * @environment client
+     * @type {NodeList<Element>}
+ */
     resizers: [],
+    /**
+     * Resize controller instances created for matching elements.
+ * @public
+ * @environment client
+     * @type {CoCreateResize[]}
+ */
     resizeWidgets: [],
 
+    /**
+     * Initializes resize controllers for elements matching handleObj.selector.
+     *
+ * @public
+ * @environment client
+     * @param {Object} handleObj - Selector and resize-handle selectors.
+ */
     init: function (handleObj) {
         for (var handleKey in handleObj)
             if (handleObj.hasOwnProperty(handleKey) && handleKey == "selector")
@@ -32,6 +57,13 @@ const coCreateResize = {
         });
     },
 
+    /**
+     * Initializes a resize controller for one element using the default handle selectors.
+     *
+ * @public
+ * @environment client
+     * @param {Element} target - Element to make resizable.
+ */
     initElement: function (target) {
         let resizeWidget = new CoCreateResize(target, {
             dragLeft: "[resize='left']",
@@ -672,3 +704,103 @@ coCreateResize.init({
     dragBottom: "[resize='bottom']"
 });
 export default coCreateResize;
+
+/**
+ * Preserves the element's original class value while resize updates grid sizing.
+ * @name class
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {string}
+ */
+
+/**
+ * Internal marker applied to this module's injected style element.
+ * @name component
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {string}
+ * @private
+ */
+
+/**
+ * Enables automatic content-based resizing when set to "auto". This applies to textareas and multiple selects.
+ * @name height
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {string}
+ * @acceptedValues auto
+ * @example
+ * <textarea height="auto"></textarea>
+ */
+
+/**
+ * Runtime state marker added while a resize gesture is active.
+ * @name resizing
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {boolean}
+ */
+
+/**
+ * Inline styles updated with the element's resized dimensions and grid span.
+ * @name style
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {string}
+ */
+
+/**
+ * Enables interactive resizing unless explicitly set to "false".
+ *
+ * @name resizable
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {boolean}
+ * @acceptedValues false
+ * @example
+ * <div resizable><span resize="right"></span></div>
+ */
+
+/**
+ * Marks a child element as a resize handle and selects its drag direction.
+ *
+ * @name resize
+ * @kind member
+ * @attribute
+ * @environment client
+ * @type {string}
+ * @acceptedValues left, right, top, bottom
+ * @example
+ * <span resize="right"></span>
+ */
+
+/**
+ * A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.
+ *
+ * @module resize
+ * @environment client
+ */
+
+/**
+ * Declarative selectors recognized by this module.
+ *
+ * @name declarative-selectors
+ * @kind member
+ * @selectors
+ * @environment client
+ * @example
+ * ```json
+ * [
+ *   "",
+ *   "[resizable]:not([resizable='false'])",
+ *   "[height='auto']",
+ *   "[height='auto'] option"
+ * ]
+ * ```
+ */
