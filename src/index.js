@@ -708,8 +708,7 @@ export default coCreateResize;
 /**
  * Preserves the element's original class value while resize updates grid sizing.
  * @name class
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {string}
  */
@@ -717,8 +716,7 @@ export default coCreateResize;
 /**
  * Internal marker applied to this module's injected style element.
  * @name component
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {string}
  * @private
@@ -727,8 +725,7 @@ export default coCreateResize;
 /**
  * Enables automatic content-based resizing when set to "auto". This applies to textareas and multiple selects.
  * @name height
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {string}
  * @acceptedValues auto
@@ -739,8 +736,7 @@ export default coCreateResize;
 /**
  * Runtime state marker added while a resize gesture is active.
  * @name resizing
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {boolean}
  */
@@ -748,8 +744,7 @@ export default coCreateResize;
 /**
  * Inline styles updated with the element's resized dimensions and grid span.
  * @name style
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {string}
  */
@@ -758,8 +753,7 @@ export default coCreateResize;
  * Enables interactive resizing unless explicitly set to "false".
  *
  * @name resizable
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {boolean}
  * @acceptedValues false
@@ -771,8 +765,7 @@ export default coCreateResize;
  * Marks a child element as a resize handle and selects its drag direction.
  *
  * @name resize
- * @kind member
- * @attribute
+ * @kind attribute
  * @environment client
  * @type {string}
  * @acceptedValues left, right, top, bottom
