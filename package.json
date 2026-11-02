@@ -22,17 +22,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cocreatejs/CoCreate-resize.git"
+    "url": "git+https://github.com/CoCreateJS/resize.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreateJS/CoCreate-resize/issues"
+    "url": "https://github.com/CoCreateJS/resize/issues"
   },
   "homepage": "https://CoCreateJS.com/docs/resize",
   "funding": {
     "type": "GitHub Sponsors ❤",
-    "url": "https://github.com/sponsors/CoCreate-app"
+    "url": "https://github.com/sponsors/CoCreateJS"
   },
   "main": "src/index.js",
   "devDependencies": {

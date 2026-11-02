@@ -1,19 +1,19 @@
 # Contributing to CoCreate-resize
 
-This project is work of [many contributors](https://github.com/CoCreateJS/CoCreate-resize/graphs/contributors).
-You're encouraged to submit [pull requests](https://github.com/CoCreateJS/CoCreate-resize/pulls),
-[propose features and discuss issues](https://github.com/CoCreateJS/CoCreate-resize/issues).
+This project is work of [many contributors](https://github.com/CoCreateJS/resize/graphs/contributors).
+You're encouraged to submit [pull requests](https://github.com/CoCreateJS/resize/pulls),
+[propose features and discuss issues](https://github.com/CoCreateJS/resize/issues).
 
 In the examples below, substitute your Github username for `contributor` in URLs.
 
 ## Fork the Project
 
-Fork the [project on Github](https://github.com/CoCreateJS/CoCreate-resize) and check out your copy.
+Fork the [project on Github](https://github.com/CoCreateJS/resize) and check out your copy.
 
 ```
 git clone https://github.com/contributor/CoCreate-resize.git
 cd CoCreate-resize
-git remote add upstream https://github.com/cocreatejs/CoCreate-resize.git
+git remote add upstream https://github.com/CoCreateJS/resize.git
 ```
 
 ## Create a Topic Branch
@@ -75,7 +75,7 @@ git push origin my-feature-branch
 
 ## Make a Pull Request
 
-Go to [https://github.com/CoCreateJS/CoCreate-resize](https://github.com/CoCreateJS/CoCreate-resize) and select your feature branch.
+Go to [https://github.com/CoCreateJS/resize](https://github.com/CoCreateJS/resize) and select your feature branch.
 Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 ## Rebase
