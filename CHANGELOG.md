@@ -1,3 +1,24 @@
+# [1.16.0](https://github.com/CoCreateJS/resize/compare/v1.15.2...v1.16.0) (2026-11-02)
+
+
+### Bug Fixes
+
+* add Deno specific entries to .gitignore ([4122483](https://github.com/CoCreateJS/resize/commit/41224831317ebc3a405bf0d4c53114bcd28bead4))
+* bump [@cocreate](https://github.com/cocreate) dependencies ([20b9e96](https://github.com/CoCreateJS/resize/commit/20b9e963a8ecd04d0fab3f03da9ae773eeac38f6))
+* bump versions ([5d35e40](https://github.com/CoCreateJS/resize/commit/5d35e40860ae005b580e1d33a3030112493e8fc7))
+* bump versions ([75a192a](https://github.com/CoCreateJS/resize/commit/75a192a12999e736b349c1cfd416717c6e3e8e28))
+* collaborate resize through editor details ([0d32afd](https://github.com/CoCreateJS/resize/commit/0d32afd8130df3d23a7881eaa6a83f31f981ea01))
+* commit ([8cf69f0](https://github.com/CoCreateJS/resize/commit/8cf69f0bd1ada59f5e5fe80ff298ee2ab7a9bd47))
+* remove trailing slash from node_modules entry in .gitignore ([6018ade](https://github.com/CoCreateJS/resize/commit/6018adedb929aa26bbabcbce171bd3da0d6face1))
+* resize ([e9bf83b](https://github.com/CoCreateJS/resize/commit/e9bf83b32a59f77d48d62a8a5b23caa0f05f00c6))
+* update git url ([f130576](https://github.com/CoCreateJS/resize/commit/f130576a44d918de9af55fded23e217f8a2937a3))
+* update GitHub Actions to use latest versions and sync package.json description ([9130b1e](https://github.com/CoCreateJS/resize/commit/9130b1eb48960d0eb6c6de24aaa1caffc4be3c0a))
+
+
+### Features
+
+* sync resize styles through editor source API ([9f8c45e](https://github.com/CoCreateJS/resize/commit/9f8c45e3b1daec59737a649738dedf8f506804c9))
+
 ## [1.15.2](https://github.com/CoCreateJS/CoCreate-resize/compare/v1.15.1...v1.15.2) (2026-07-19)
 
 
