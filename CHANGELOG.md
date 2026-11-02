@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/CoCreateJS/resize/compare/v1.16.0...v2.0.0) (2026-11-02)
+
+
+### chore
+
+* record package identity migration as breaking ([359cffb](https://github.com/CoCreateJS/resize/commit/359cffb0abc61180f79de897a2f1efffada145bf))
+
+
+### BREAKING CHANGES
+
+* Consumers must install @cocreate/resize and use the renamed CoCreateJS repository identity; the previous package and repository identities are no longer supported.
+
 # [1.16.0](https://github.com/CoCreateJS/resize/compare/v1.15.2...v1.16.0) (2026-11-02)
 
 
