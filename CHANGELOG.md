@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/CoCreateJS/resize/compare/v2.0.0...v2.0.1) (2026-11-05)
+
+
+### Bug Fixes
+
+* upgrade CoCreate dependencies to v2 ([653b009](https://github.com/CoCreateJS/resize/commit/653b0095d04816b070c1fc8d6a69d3219442f35a))
+
 # [2.0.0](https://github.com/CoCreateJS/resize/compare/v1.16.0...v2.0.0) (2026-11-02)
 
 
